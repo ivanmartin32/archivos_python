@@ -25,19 +25,20 @@ def ej1():
     # con el stock de elementos de ferreteris
     # el diccionario vacio debe llamarse "stock"
     
-    # stock = ....
+    stock = {}
 
     # Luego de crear el diccionario completelo
     # con el siguiente stock:
-    # tornillos = 100
-    # tuercas = 150
-    # arandelas = 300
+    stock['tornillos'] = 100
+    stock['tuercas'] = 150
+    stock['arandelas'] = 300
 
     # Los nombres tornillos, tuercas y arandelas
     # son las claves (keys) del diccionario
     # mientras que las cantidades son los valores (values)
 
     # Una vez armado el diccionario imprimirlo en pantalla con print
+    print(stock)
 
 
 def ej2():
@@ -48,8 +49,22 @@ def ej2():
     # Crear un diccionario por cada mes, cada diccionario se llamara "mes"
     # Cada uno que se genere debe tener los tres campos
     # tornillos, tuerca y arandelas y su respectivo stock
-
+    mes1 = {}
+    mes2 = {}
+    
+    mes1['tornillos'] = int(input('Ingrese el stock de tornillos \n'))
+    mes1['tuercas'] = int(input('Ingrese el stock de tuercas \n'))
+    mes1['arandelas'] = int(input('Ingrese el stock de arandelas \n'))
+    mes2['tornillos'] = int(input('Ingrese el stock de tornillos \n'))
+    mes2['tuercas'] = int(input('Ingrese el stock de tuercas \n'))
+    mes2['arandelas'] = int(input('Ingrese el stock de arandelas \n'))
+        
     # Cada diccionario deberá almacenarse en una lista llamada stock
+
+    stock = []
+    stock.append(mes1)
+    stock.append(mes2)
+    
 
     # Paso 1:
     # Generar un bucle de 3 iteraciones, solo generaremos el stock de
@@ -62,10 +77,16 @@ def ej2():
     # Paso 3:
     # Generar un diccionar llamado "mes" con los tres valores
     # de stock ingresados por consola
+    mes3 = {'tornillos': int(input('Ingrese el stock de tornillos \n')),
+        'tuecas': int(input('Ingrese el stock de tornillos \n')),
+        'arandelas': int(input('Ingrese el stock de tornillos \n'))}
+        
+    
 
     # Paso 4:
     # Almacenar ese diccionario generado en una lista
     # llamada "stock"
+    stock.append(mes3)
 
     # Paso 5:
     # Repetir el proceso nuevamente en la siguiente
@@ -78,11 +99,12 @@ def ej2():
     # el siguiente ejemplo:
 
     # [{'tornillos': 30, 'tuercas': 20, 'arandelas': 5}, {'tornillos': 100, 'tuercas': 50, 'arandelas': 15}, {'tornillos': 80, 'tuercas': 70, 'arandelas': 10}]
-
+    print(stock)
     # NOTA: Este ejercicio es exactamente lo mismo que armar
     # el edificio viste en clase, con los departamentos por piso
     # pero los valores para cada diccionario en cada mes
     # son ingresados por consola
+    
 
 
 def eje3():
@@ -110,6 +132,6 @@ def ej4():
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
     ej1()
-    # ej2()
+    ej2()
     # ej3()
     # ej4()
