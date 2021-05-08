@@ -52,6 +52,8 @@ def ej1():
             if (k == 'moneda') and (v == 'ARS'):
                 alquiler_ARS += 1
             if k == 'precio':
+            # OJO! estás agregando también los alquileres en dolares!
+            # tenes que agregar el resto de los if, dentro de el primero que tiene el filtro del tipo de moneda en "ARS"
                 promedio_alquiler_ARS.append(float(v))
             if k == 'precio':
                 max_alquiler.append(float(v))
