@@ -125,7 +125,9 @@ def ej3():
                   
     print(sum(stock_tornillos))
     
-    csvfile.close()
+    csvfile.close() # El close podrías hacerlo antes, una vez que levantaste el stock, ya podes cerrar el archivo
+    # de esa manera el archivo queda abierto menos tiempo. En esta aplicación no pasa nada, pero si es una aplicación
+    # donde está todo el tiempo consultando al archivo, podes tener un problema :D
 
 
 def ej4():
