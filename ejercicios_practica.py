@@ -155,6 +155,8 @@ def ej4():
     print(contar_2_ambientes)
     print(contar_3_ambientes)
 
+    csvfile.close()
+
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
     ej1()
