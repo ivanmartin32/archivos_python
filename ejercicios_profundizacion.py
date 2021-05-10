@@ -39,27 +39,29 @@ def ej1():
     '''
     
     with open ('propiedades.csv') as csvfile:
-        alquiler = list(csv.DictReader(csvfile))
+        alquileres = list(csv.DictReader(csvfile))
 
-    alquiler_ARS = 0
-    promedio_alquiler_ARS = []
+    alquileres_ARS = 0
+    promedio_alquileres_ARS = []
     max_alquiler = []
     min_alquiler = []
 
-    for i in range(len(alquiler)):
-        columnas = alquiler[i]
+    for i in range(len(alquileres)):
+        columnas = alquileres[i]
         for k,v in columnas.items():
             if (k == 'moneda') and (v == 'ARS'):
-                alquiler_ARS += 1
-            if k == 'precio':
-                promedio_alquiler_ARS.append(float(v))
-            if k == 'precio':
-                max_alquiler.append(float(v))
-            if k == 'precio':
-                min_alquiler.append(float(v))
+                alquileres_ARS += 1
 
-    print('La cantidad de alquileres en pesos son:', alquiler_ARS)
-    print('El promedio de valores de alquileres es:', mean(promedio_alquiler_ARS))
+        for k,v in columnas.items():
+            if (k == 'moneda') and (v == 'ARS'):
+                for k,v in columnas.items():
+                    if (k == 'precio'):
+                        promedio_alquileres_ARS.append(float(v))
+                        max_alquiler.append(float(v))
+                        min_alquiler.append(float(v))
+    
+    print('La cantidad de alquileres en pesos son:', alquileres_ARS)
+    print('El promedio de valores de alquileres es:', mean(promedio_alquileres_ARS))
     print('El alquiler maximo es de:', max(max_alquiler))
     print('El alquiler minimo es de:', min(min_alquiler))
     
