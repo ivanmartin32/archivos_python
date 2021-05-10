@@ -116,6 +116,7 @@ def ej3():
     '''
     csvfile = open('stock.csv')
     stock = list(csv.DictReader(csvfile))
+    csvfile.close()
     stock_tornillos = []
     for i in range(len(stock)):         
         datos = stock[i]
@@ -125,7 +126,7 @@ def ej3():
                   
     print(sum(stock_tornillos))
     
-    csvfile.close()
+    
 
 
 def ej4():
@@ -140,7 +141,8 @@ def ej4():
     '''
     with open ('propiedades.csv') as csvfile:
         data = list(csv.DictReader(csvfile))
-    
+    csvfile.close()
+
     contar_2_ambientes = 0
     contar_3_ambientes = 0
 
@@ -155,7 +157,7 @@ def ej4():
     print(contar_2_ambientes)
     print(contar_3_ambientes)
 
-    csvfile.close()
+    
 
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
